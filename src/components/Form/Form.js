@@ -33,14 +33,14 @@ class Form extends React.Component {
 
     return (
       <form>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Task</label>
         <input
           type="text"
           name="name"
           id="name"
           value={name}
           onChange = {this.handleChange} />
-        <label htmlFor="job">Job</label>
+        <label htmlFor="job">Description</label>
         <input
           type="text"
           name="job"

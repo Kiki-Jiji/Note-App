@@ -34,9 +34,9 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h1>Hello, React!</h1>
-        <Table character={this.state} removeNote={this.removeNote}/>
+        <h1>Note Taker!</h1>
         <Form handleSubmit = {this.handleSubmit}/>
+        <Table character={this.state} removeNote={this.removeNote}/>
       </div>
     )
   }

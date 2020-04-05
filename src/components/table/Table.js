@@ -4,8 +4,8 @@ const TableHead = () => {
       return (
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Job</th>
+            <th>Task</th>
+            <th>Description</th>
           </tr>
         </thead>
       )
