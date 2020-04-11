@@ -5,6 +5,7 @@ class Form extends React.Component {
       super(props)
       this.handleChange = this.handleChange.bind(this)
       this.submitForm = this.submitForm.bind(this)
+        this.keyPressed = this.keyPressed.bind(this);
   }
 
   initialState = {
@@ -28,6 +29,13 @@ class Form extends React.Component {
     this.setState(this.initialState)
   }
 
+
+  keyPressed(event) {
+  if (event.key === "Enter") {
+    this.submitForm()
+  }
+  }
+
   render() {
     const {name, job} = this.state;
 
@@ -47,8 +55,9 @@ class Form extends React.Component {
           id="job"
           value={job}
           onChange = {this.handleChange}
+           onKeyPress={this.keyPressed}
         />
-        <input type="button" value="Sumbit" onClick= {this.submitForm}/>
+        <input type="button" value="Submit" onClick= {this.submitForm}/>
       </form>
     )
   }
